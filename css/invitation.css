@@ -1,19 +1,32 @@
 /* invitation.css */
 
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Dainty+Beau&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Playfair Display', serif;
+font-family: 'Dainty Beau', 'Verdana';
   color: #4b2e2e;
   min-height: 100vh;
-  overflow-x: hidden;
-  background: linear-gradient(-45deg, #f4e9d8, #f7f0e0, #e9d9c5, #f4e9d8);
+  overflow-x: hidden;background: linear-gradient(-45deg, #f4e9d8, #f7f0e0, #e9d9c5, #f4e9d8);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
   background-size: 400% 400%;
   animation: gradientBG 15s ease infinite;
 }
-
+/* Animasi biar gradasinya gerak pelan-pelan */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 @keyframes gradientBG {
   0% {
     background-position: 0% 50%;
@@ -97,7 +110,8 @@ body {
 
 /* Animasi elegan bertahap */
 .greeting {
-  font-size: 1.2rem;
+   font-family: 'Cookie', cursive;
+  font-size: 2rem;
   margin-bottom: 10px;
   animation: fadeInUp 1s ease forwards;
   animation-delay: 0.3s;
@@ -112,33 +126,95 @@ body {
   opacity: 0;
 }
 
-.bride {
-  font-family: 'Great Vibes', cursive;
-  font-size: 2.5rem;
-  color: #7c4c8a;
-  margin: 10px 0;
-  animation: zoomIn 1s ease forwards;
-  animation-delay: 1s;
-  opacity: 0;
+.wedding-title {
+  text-align: center;
+  margin-top: 2rem;
 }
 
-.and {
-  font-size: 1.8rem;
-  display: inline-block;
-  margin: 10px;
+.groom-name,
+.bride-name {
+ font-family: "Cookie", cursive;
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #7c4c8a;
+  white-space: nowrap;
+}
+
+.and-symbol {
+  font-size: 2rem;
   color: #c58cc0;
-  animation: pulse 2s infinite;
+  margin: 8px 0;
+  line-height: 1;
+}
+
+/* Responsive Mobile */
+@media (max-width: 480px) {
+  .groom-name,
+  .bride-name,
+  .greeting  {
+    font-size: 1.6rem;
+  }
+
+  .and-symbol {
+    font-size: 1.4rem;
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.wedding-title {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.groom-name,
+.bride-name {
+ font-family: "Cookie", cursive;
+
+  font-size: 3rem;
+  font-weight: 600;
+  color: #7c4c8a;
+  white-space: nowrap;
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.groom-name {
+  animation-delay: 0.5s;
+}
+
+.and-symbol {
+  font-size: 2rem;
+  color: #c58cc0;
+  margin: 8px 0;
+  line-height: 1;
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 1s;
+}
+
+.bride-name {
   animation-delay: 1.5s;
 }
 
-.groom {
-  font-family: 'Great Vibes', cursive;
-  font-size: 2.5rem;
-  color: #7c4c8a;
-  margin: 10px 0;
-  animation: zoomIn 1s ease forwards;
-  animation-delay: 1.8s;
-  opacity: 0;
+/* Responsive Mobile */
+@media (max-width: 480px) {
+  .groom-name,
+  .bride-name {
+    font-size: 3rem;
+  }
+
+  .and-symbol {
+    font-size: 1.8rem;
+  }
 }
 
 .divider {
@@ -209,7 +285,8 @@ body {
 }
 
 .name {
-  font-size: 1.7rem;
+  font-family: 'Cookie', cursive;
+  font-size: 2rem;
   font-weight: bold;
   margin: 0.5rem 0 0.2rem;
 }
@@ -279,7 +356,7 @@ body {
   }
 
   .name {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
   }
 
   .desc {
@@ -314,6 +391,7 @@ body {
 }
 
 .heading {
+  font-family: 'Cookie', cursive;
   font-size: 1.6rem;
   font-weight: bold;
   margin-bottom: 1rem;
@@ -401,7 +479,7 @@ body {
 /* Responsive */
 @media screen and (max-width: 768px) {
   .heading {
-    font-size: 1.4rem;
+    font-size: 2.5rem;
   }
 
   .section p {
@@ -425,6 +503,7 @@ body {
 }
 
 .moment-heading {
+  font-family: 'Cookie', cursive;
   font-size: 2rem;
   font-family: 'Great Vibes', cursive;
   color: #7c4c8a;
@@ -476,7 +555,8 @@ body {
 /* Responsive */
 @media (max-width: 600px) {
   .moment-heading {
-    font-size: 1.6rem;
+    font-family: 'Cookie', cursive;
+    font-size: 2.5rem;
   }
 
   .gallery {
@@ -493,6 +573,7 @@ body {
 }
 
 .rsvp-heading {
+  font-family: 'Cookie', cursive;
   font-size: 1.8rem;
   color: #7c4c8a;
   margin-bottom: 2rem;
@@ -558,7 +639,8 @@ body {
 /* Responsive */
 @media screen and (max-width: 600px) {
   .rsvp-heading {
-    font-size: 1.5rem;
+    font-family: 'Cookie', cursive;
+    font-size: 2.5rem;
   }
 
   #rsvpForm {
@@ -573,6 +655,7 @@ body {
 }
 
 .gift-heading {
+  font-family: 'Cookie', cursive;
   font-size: 1.8rem;
   color: #7c4c8a;
   font-family: 'Great Vibes', cursive;
@@ -697,6 +780,10 @@ body {
   .qr-code {
     width: 160px;
   }
+   .gift-heading {
+    font-family: 'Cookie', cursive;
+    font-size: 2.5rem;
+  }
 }
 
 
@@ -797,7 +884,8 @@ body {
   }
 
   .closing-names {
-    font-size: 20px;
+    font-family: 'Cookie', cursive;
+    font-size: 2.5rem;
   }
 
   .site-footer {
