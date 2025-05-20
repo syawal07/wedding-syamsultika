@@ -1,0 +1,806 @@
+/* invitation.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Playfair Display', serif;
+  color: #4b2e2e;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: linear-gradient(-45deg, #f4e9d8, #f7f0e0, #e9d9c5, #f4e9d8);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes rotateIn {
+  from {
+    opacity: 0;
+    transform: rotate(-90deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+}
+
+/* Base container */
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f4e9d8;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Main invitation section */
+.main-invitation {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Text box */
+.text-box {
+  text-align: center;
+  max-width: 700px;
+  padding: 30px;
+}
+
+/* Animasi elegan bertahap */
+.greeting {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 0.3s;
+  opacity: 0;
+}
+
+.invitation-text {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 0.6s;
+  opacity: 0;
+}
+
+.bride {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.5rem;
+  color: #7c4c8a;
+  margin: 10px 0;
+  animation: zoomIn 1s ease forwards;
+  animation-delay: 1s;
+  opacity: 0;
+}
+
+.and {
+  font-size: 1.8rem;
+  display: inline-block;
+  margin: 10px;
+  color: #c58cc0;
+  animation: pulse 2s infinite;
+  animation-delay: 1.5s;
+}
+
+.groom {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.5rem;
+  color: #7c4c8a;
+  margin: 10px 0;
+  animation: zoomIn 1s ease forwards;
+  animation-delay: 1.8s;
+  opacity: 0;
+}
+
+.divider {
+  width: 80px;
+  margin: 20px 0;
+  animation: rotateIn 1s ease forwards;
+  animation-delay: 2.2s;
+  opacity: 0;
+}
+
+.quote {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin: 20px 0 10px;
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 2.6s;
+  opacity: 0;
+}
+
+.surah {
+  font-style: italic;
+  font-size: 0.95rem;
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 3s;
+  opacity: 0;
+}
+
+
+#soundToggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.invitation-section {
+  background-color: #f4e9d8;
+  padding: 2rem 1.2rem;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.photo-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.2rem;
+}
+
+.invitation-photo {
+  width: 85%;
+  max-width: 480px;
+  border-radius: 2rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.invitation-text {
+  max-width: 600px;
+  margin: 0 auto;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* Jarak antar elemen */
+  align-items: center;
+}
+
+.name {
+  font-size: 1.7rem;
+  font-weight: bold;
+  margin: 0.5rem 0 0.2rem;
+}
+
+.gold {
+  background: linear-gradient(to right, #c9a03f, #f0d387);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.desc {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 0.3rem;
+}
+
+.instagram-tag {
+  display: inline-block;
+  padding: 0.35rem 1.1rem;
+  background-image: linear-gradient(315deg, #a4508b 0%, #5f0a87 74%);
+  color: #fff;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+
+/* Animasi dasar dan delay */
+.animated {
+  opacity: 0;
+  transform: translateY(20px);
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeInUp {
+  animation-name: fadeInUp;
+  animation-duration: 1s;
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+  animation-duration: 1s;
+}
+
+/* Responsive Mobile */
+@media screen and (max-width: 768px) {
+  .invitation-section {
+    padding: 1.5rem 1rem;
+  }
+
+  .invitation-photo {
+    width: 100%;
+    border-radius: 1.5rem;
+  }
+
+  .name {
+    font-size: 1.5rem;
+  }
+
+  .desc {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .instagram-tag {
+    font-size: 0.85rem;
+    padding: 0.3rem 1rem;
+  }
+
+  .invitation-text {
+    gap: 0.8rem;
+  }
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+  background-color: #f4e9d8;
+  overflow-x: hidden;
+}
+
+.section {
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+  text-align: center;
+}
+
+.heading {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #7c4c8a;
+}
+
+.akad {
+  color: #a35a8c;
+}
+
+.resepsi {
+  color: #5f0a87;
+}
+
+.section p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #333;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.countdown div {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 0.7rem 1rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.countdown span {
+  font-size: 1.6rem;
+  color: #7c4c8a;
+  display: block;
+}
+
+.map {
+  width: 100%;
+  max-width: 600px;
+  height: 300px;
+  border: none;
+  border-radius: 1rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  margin-bottom: 1rem;
+}
+
+.map-button {
+  display: inline-block;
+  background-color: #5f0a87;
+  color: #fff;
+  padding: 0.7rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.map-button:hover {
+  background-color: #a4508b;
+}
+
+/* Animations */
+.animated {
+  opacity: 0;
+  transform: translateY(25px);
+  animation: fadeInUp 1s ease-in-out forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .heading {
+    font-size: 1.4rem;
+  }
+
+  .section p {
+    font-size: 0.95rem;
+  }
+
+  .countdown {
+    gap: 1rem;
+  }
+
+  .map {
+    height: 250px;
+  }
+}
+
+
+.moment-section {
+  padding: 3rem 1rem;
+  background-color: #f4e9d8;
+  text-align: center;
+}
+
+.moment-heading {
+  font-size: 2rem;
+  font-family: 'Great Vibes', cursive;
+  color: #7c4c8a;
+  margin-bottom: 2rem;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 1.2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.08);
+}
+
+/* Animasi masuk per elemen */
+.animated {
+  opacity: 0;
+  transform: scale(0.95);
+  animation: zoomFadeIn 1s ease forwards;
+}
+
+@keyframes zoomFadeIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .moment-heading {
+    font-size: 1.6rem;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.7rem;
+  }
+}
+
+
+.rsvp-section {
+  background-color: #f4e9d8;
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.rsvp-heading {
+  font-size: 1.8rem;
+  color: #7c4c8a;
+  margin-bottom: 2rem;
+  font-family: 'Great Vibes', cursive;
+}
+
+/* Form Styling */
+#rsvpForm {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#rsvpForm input,
+#rsvpForm textarea {
+  padding: 0.9rem 1rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  resize: none;
+  font-family: 'Segoe UI', sans-serif;
+  transition: border 0.3s ease;
+}
+
+#rsvpForm input:focus,
+#rsvpForm textarea:focus {
+  border-color: #a4508b;
+  outline: none;
+}
+
+#rsvpForm button {
+  padding: 0.8rem;
+  background: linear-gradient(45deg, #a4508b, #5f0a87);
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+#rsvpForm button:hover {
+  background: linear-gradient(45deg, #5f0a87, #a4508b);
+  transform: scale(1.03);
+}
+
+/* Animasi umum */
+.animated {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+  .rsvp-heading {
+    font-size: 1.5rem;
+  }
+
+  #rsvpForm {
+    padding: 0 1rem;
+  }
+}
+
+.gift-section {
+  background-color: #f4e9d8;
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.gift-heading {
+  font-size: 1.8rem;
+  color: #7c4c8a;
+  font-family: 'Great Vibes', cursive;
+  margin-bottom: 2.5rem;
+}
+
+/* GIFT LIST: Centered & Responsive */
+.gift-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* CARD GIFT ITEM */
+.gift-item {
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 300px;
+  transition: transform 0.3s ease;
+}
+
+.gift-item:hover {
+  transform: translateY(-5px);
+}
+
+.bank-logo {
+  width: 80px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.bank-info {
+  text-align: center;
+}
+
+.bank-name {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #444;
+}
+
+.account-number {
+  font-family: monospace;
+  font-size: 1rem;
+  margin-bottom: 0.7rem;
+  color: #333;
+}
+
+.gift-item button {
+  padding: 0.5rem 1.2rem;
+  background: linear-gradient(45deg, #a4508b, #5f0a87);
+  border: none;
+  color: white;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+}
+
+.gift-item button:hover {
+  background: linear-gradient(45deg, #5f0a87, #a4508b);
+}
+
+/* QR SECTION: Centered & Rapi */
+.qr-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 3rem;
+}
+
+.qr-code {
+  width: 200px;
+  border-radius: 1rem;
+}
+
+#downloadQR {
+  background: #7c4c8a;
+  color: white;
+  padding: 0.6rem 1.4rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+}
+
+#downloadQR:hover {
+  background: #5f0a87;
+}
+
+/* Animasi */
+.animated {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Fix */
+@media screen and (max-width: 768px) {
+  .gift-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .qr-code {
+    width: 160px;
+  }
+}
+
+
+/* Closing Message (dalam card elegan) */
+.closing-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.closing-card {
+  max-width: 700px;
+  width: 100%;
+  background-color: #fffefc;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  text-align: center;
+  animation: fadeInUp 1s ease forwards;
+  border: 2px solid #f4e9d8;
+}
+
+.closing-card p {
+  margin-bottom: 14px;
+  font-size: 17px;
+  line-height: 1.8;
+  color: #4b2e2e;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.closing-names {
+  margin-top: 25px;
+  font-size: 26px;
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  color: #4b2e2e;
+  line-height: 1.6;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease forwards;
+  animation-delay: 1.2s;
+}
+
+/* Footer */
+.site-footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #f4e9d8;
+  color: #4b2e2e;
+  font-size: 14px;
+  border-top: 1px solid #ddd;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 1.6s;
+}
+
+.site-footer .love {
+  color: red;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Delay for fade effect */
+.fade-delay-1 { animation-delay: 0.3s; }
+.fade-delay-2 { animation-delay: 0.6s; }
+.fade-delay-3 { animation-delay: 0.9s; }
+.fade-delay-4 { animation-delay: 1.2s; }
+.fade-delay-5 { animation-delay: 1.6s; }
+
+/* Responsive */
+@media (max-width: 600px) {
+  .closing-card {
+    padding: 20px;
+    border-radius: 16px;
+  }
+
+  .closing-card p {
+    font-size: 15px;
+  }
+
+  .closing-names {
+    font-size: 20px;
+  }
+
+  .site-footer {
+    font-size: 13px;
+  }
+}

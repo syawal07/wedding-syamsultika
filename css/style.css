@@ -1,0 +1,284 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f1e9da;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero {
+  background-image: url('../assets/bg1.jpg');
+  background-size: cover;
+  background-position: center 35%; /* Adjusted to show faces better */;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5); /* sedikit lebih gelap untuk kontras lebih kuat */
+  padding: 25px 30px; /* padding diperkecil, lebih ringkas */
+  text-align: center;
+  color: #fff;
+  border-radius: 15px;
+  max-width: 320px; /* batasi lebar */
+  margin: 0 auto;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5); /* tambah shadow lebih dalam */
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Efek hover untuk sedikit “wowo” */
+.overlay:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+}
+
+.invitation-box {
+  background: rgba(30, 30, 30, 0.6); /* lebih gelap, transparan */
+  color: #eee; /* teks putih terang untuk kontras */
+  padding: 15px 18px;
+  border-radius: 12px;
+  margin-bottom: 18px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* shadow lebih tegas */
+}
+
+/* Responsive agar tetap pas di hp */
+@media screen and (max-width: 480px) {
+  .overlay {
+    max-width: 280px;
+    padding: 20px 20px;
+  }
+  
+  .invitation-box {
+    padding: 12px 15px;
+    font-size: 0.9rem;
+  }
+  
+  .name {
+    font-size: 1rem;
+  }
+}
+
+
+#openBtn {
+  background-color: #b28cb8;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#openBtn:hover {
+  background-color: #9d7aa7;
+}
+
+#soundToggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #b28cb8;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  padding: 12px;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+  transition: background-color 0.3s ease;
+}
+
+#soundToggle:hover {
+  background-color: #9d7aa7;
+}
+
+/* Closing Message */
+.closing-message {
+  max-width: 600px;
+  margin: 60px auto 40px;
+  padding: 20px;
+  text-align: center;
+  font-size: 16px;
+  color: #4b2e2e;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.closing-message p {
+  margin-bottom: 12px;
+  line-height: 1.7;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.closing-names {
+  margin-top: 30px;
+  font-size: 24px;
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  color: #4b2e2e;
+  line-height: 1.8;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease forwards;
+  animation-delay: 1.2s;
+}
+
+/* Footer */
+.site-footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #f4e9d8;
+  color: #4b2e2e;
+  font-size: 14px;
+  border-top: 1px solid #ddd;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 1.6s;
+}
+
+.site-footer .love {
+  color: red;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Animation keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Delay for animated text */
+.fade-delay-1 { animation-delay: 0.3s; }
+.fade-delay-2 { animation-delay: 0.6s; }
+.fade-delay-3 { animation-delay: 0.9s; }
+.fade-delay-4 { animation-delay: 1.2s; }
+.fade-delay-5 { animation-delay: 1.6s; }
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .closing-message {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .closing-names {
+    font-size: 20px;
+  }
+
+  .site-footer {
+    font-size: 13px;
+  }
+}
+.countdown-section {
+  margin-top: 2rem;
+  text-align: center;
+  color: #fff;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.countdown-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  animation: fadeInUp 1.8s ease-in-out;
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  font-size: 1rem;
+  animation: fadeInUp 2.2s ease-in-out;
+}
+
+.countdown div {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(4px);
+  padding: 0.6rem 0.8rem;
+  border-radius: 0.8rem;
+  min-width: 50px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+  animation: pulseCard 3s ease-in-out infinite;
+}
+
+.countdown div:hover {
+  transform: scale(1.05);
+}
+
+.countdown span {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: bold;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.countdown small {
+  font-size: 0.75rem;
+}
+
+/* Animasi */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulseCard {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+}
+
+/* Responsive untuk HP */
+@media screen and (max-width: 600px) {
+  .countdown {
+    gap: 0.5rem;
+  }
+
+  .countdown div {
+    padding: 0.5rem 0.6rem;
+    min-width: 45px;
+    border-radius: 0.6rem;
+  }
+
+  .countdown span {
+    font-size: 1.2rem;
+  }
+
+  .countdown-title {
+    font-size: 1.25rem;
+  }
+
+  .countdown-section {
+    margin-top: 1.5rem;
+  }
+}
+
