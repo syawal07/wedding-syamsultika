@@ -117,11 +117,13 @@ window.onload = () => {
   };
 };
 
+// Fungsi ambil parameter URL
 function getQueryParam(param) {
   const urlParams = new URLSearchParams(window.location.search);
   return urlParams.get(param);
 }
 
+// Jalankan setelah halaman siap
 document.addEventListener("DOMContentLoaded", function () {
   const namaTamu = getQueryParam("to");
   const elemenNama = document.getElementById("guestName");
