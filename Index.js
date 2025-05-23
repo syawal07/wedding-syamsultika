@@ -117,15 +117,20 @@ window.onload = () => {
   };
 };
 
-// Ambil query parameter dari URL
-document.addEventListener("DOMContentLoaded", function () {
+// Fungsi untuk mengambil parameter dari URL
+function getQueryParam(param) {
   const urlParams = new URLSearchParams(window.location.search);
-  const guest = urlParams.get("to");
+  return urlParams.get(param);
+}
 
-  const guestNameElement = document.getElementById("guestName");
-  if (guestNameElement) {
-    guestNameElement.textContent = guest
-      ? decodeURIComponent(guest)
-      : "Tamu Undangan";
-  }
-});
+// Ambil nama dari parameter 'to' di URL
+const namaTamu = getQueryParam("to");
+
+// Tampilkan di elemen dengan ID 'guestName'
+const elemenNama = document.getElementById("guestName");
+if (namaTamu) {
+  const namaFormatted = decodeURIComponent(namaTamu.replace(/\+/g, " "));
+  elemenNama.textContent = namaFormatted;
+} else {
+  elemenNama.textContent = "Tamu Undangan";
+}
