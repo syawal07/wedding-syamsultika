@@ -117,20 +117,18 @@ window.onload = () => {
   };
 };
 
-// Fungsi untuk mengambil parameter dari URL
 function getQueryParam(param) {
   const urlParams = new URLSearchParams(window.location.search);
   return urlParams.get(param);
 }
 
-// Ambil nama dari parameter 'to' di URL
-const namaTamu = getQueryParam("to");
-
-// Tampilkan di elemen dengan ID 'guestName'
-const elemenNama = document.getElementById("guestName");
-if (namaTamu) {
-  const namaFormatted = decodeURIComponent(namaTamu.replace(/\+/g, " "));
-  elemenNama.textContent = namaFormatted;
-} else {
-  elemenNama.textContent = "Tamu Undangan";
-}
+document.addEventListener("DOMContentLoaded", function () {
+  const namaTamu = getQueryParam("to");
+  const elemenNama = document.getElementById("guestName");
+  if (namaTamu && elemenNama) {
+    const namaFormatted = decodeURIComponent(namaTamu.replace(/\+/g, " "));
+    elemenNama.textContent = namaFormatted;
+  } else if (elemenNama) {
+    elemenNama.textContent = "Tamu Undangan";
+  }
+});
