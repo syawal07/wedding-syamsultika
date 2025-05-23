@@ -118,15 +118,14 @@ window.onload = () => {
 };
 
 // Ambil query parameter dari URL
-const urlParams = new URLSearchParams(window.location.search);
-const guest = urlParams.get("to");
+document.addEventListener("DOMContentLoaded", function () {
+  const urlParams = new URLSearchParams(window.location.search);
+  const guest = urlParams.get("to");
 
-// Tampilkan nama jika tersedia
-if (guest) {
-  document.getElementById("guestName").textContent = decodeURIComponent(guest);
-}
-if (guest) {
-  document.getElementById("guestName").textContent = decodeURIComponent(guest);
-} else {
-  document.getElementById("guestName").textContent = "Tamu Undangan";
-}
+  const guestNameElement = document.getElementById("guestName");
+  if (guestNameElement) {
+    guestNameElement.textContent = guest
+      ? decodeURIComponent(guest)
+      : "Tamu Undangan";
+  }
+});
